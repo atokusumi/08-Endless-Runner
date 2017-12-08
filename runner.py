@@ -120,6 +120,27 @@ def main():
 			if event.type == pygame.KEYDOWN:
 				keys = pygame.key.get_pressed()
 
+if event.type == pygame.KEYDOWN:
+		key = pygame.key.get_pressed(up)
+	def __init__(self):
+			pygame.sprite.Sprite.__init__(self)
+			self.jumping_images = glob.glob("resources/character/r_*.png")
+			self.jumping_images.sort()		
+			self.jumping = []
+			for rj in self.jumping_images:
+				temp = pygame.image.load(rj)
+				self.jumping.append(temp)
+			self.jumping_frame = 0
+			self.image = self.jumping[self.jumping_frame]
+			self.rect = self.image.get_rect()
+			self.rect.x = 50
+			self.rect.y = 442
+			self.speed = (5,0)
+			self.falling = False
+				
+
+		
+
 
 		world.update(player.speed)
 		world.draw(screen)
