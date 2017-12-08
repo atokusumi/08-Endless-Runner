@@ -132,11 +132,8 @@ if event.type == pygame.KEYDOWN:
 				self.jumping.append(temp)
 			self.jumping_frame = 0
 			self.image = self.jumping[self.jumping_frame]
-			self.rect = self.image.get_rect()
-			self.rect.x = 50
-			self.rect.y = 442
-			self.speed = (5,0)
-			self.falling = False
+			
+			
 				
 
 		
